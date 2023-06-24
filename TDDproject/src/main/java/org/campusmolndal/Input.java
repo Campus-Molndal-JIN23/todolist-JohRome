@@ -3,12 +3,12 @@ package org.campusmolndal;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner input;
+    private Scanner input;
 
     // TODO: Test this class and all its edge cases
 
-    public Input() {
-        input = new Scanner(System.in);
+    public Input(Scanner input) {
+        this.input = input;
     }
 
     public int readIntFromUser() {
@@ -21,7 +21,6 @@ public class Input {
     public String readStringFromUser() {
         // Check for empty string
         // Check for string with only whitespace
-        // Check for null
         return input.nextLine();
     }
         public void consumeNewLine() {

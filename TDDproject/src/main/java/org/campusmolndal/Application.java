@@ -1,5 +1,7 @@
 package org.campusmolndal;
 
+import java.util.Scanner;
+
 public class Application {
     private MongoDBOperations mongoDBOperations;
     private ToDoFacade toDoFacade;
@@ -11,7 +13,7 @@ public class Application {
     public Application() {
         mongoDBOperations = new MongoDBOperations();
         toDoFacade = new ToDoFacade(mongoDBOperations);
-        input = new Input();
+        input = new Input(new Scanner(System.in));
     }
 
     public void runProgram() {
