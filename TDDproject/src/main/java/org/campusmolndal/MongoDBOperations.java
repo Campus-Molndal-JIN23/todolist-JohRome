@@ -13,6 +13,8 @@ import java.util.List;
 
 public class MongoDBOperations implements DatabaseOperations {
 
+    // TODO: Add methods for connection/disconnecting to MongoDB
+
     private MongoClient mongoClient;
     private MongoDatabase database;
     private MongoCollection<Document> todoCollection;
