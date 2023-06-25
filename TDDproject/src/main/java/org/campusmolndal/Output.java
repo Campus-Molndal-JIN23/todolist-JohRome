@@ -5,15 +5,15 @@ import java.util.List;
 public class Output {
 
     public static void showTodoMenu() {
-        System.out.println("|---CRUD(L) MENU---|");
-        System.out.println("1. Create a new todo");
-        System.out.println("2. Read todo by id");
-        System.out.println("3. Update todo text");
-        System.out.println("4. Update todo done status");
-        System.out.println("5. Delete todo by id");
-        System.out.println("6. Print all todos");
-        System.out.println("7. Exit");
-        System.out.println("\nPlease enter your choice: ");
+        System.out.println("""
+                1. Create a new todo
+                2. Read todo by id
+                3. Update todo text
+                4. Update todo done status
+                5. Delete todo by id
+                6. Print all todos
+                7. Exit
+                \nPlease enter your choice: """);
     }
 
     public static void printAll(ToDoFacade toDoFacade) {
