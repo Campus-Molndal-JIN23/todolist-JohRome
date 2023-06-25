@@ -1,29 +1,63 @@
 package org.campusmolndal;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
     private Scanner input;
 
-    // TODO: Test this class and all its edge cases
-
     public Input(Scanner input) {
         this.input = input;
     }
 
-    public int readIntFromUser() {
-        // Check for negative numbers
-        // Check for decimals
-        // Check for Integer MAX
-        return input.nextInt();
+    public int readCorrectIntFromUser() {
+        int answer = 0;
+        boolean isValid = false;
+
+        while (!isValid) {
+            try {
+                answer = input.nextInt();
+                isValid = errorCheckIntInput(answer);
+            } catch (InputMismatchException e) {
+                input.next();
+                System.out.println("Wrong input");
+                //Output.tellUserWrongInputIsMade(e);
+            }
+        }
+        return answer;
+    }
+
+    private boolean errorCheckIntInput(int answer) {
+        if (answer < 0) {
+            Output.promptUserForCorrectInt();
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public String readStringFromUser() {
-        // Check for empty string
-        // Check for string with only whitespace
-        return input.nextLine();
+        String answer = "";
+        boolean isValid = false;
+
+        while (!isValid) {
+            try {
+                answer = input.nextLine();
+                isValid = errorChecksStringInput(answer);
+            } catch (Exception e) {
+                System.out.println("Empty string");
+            }
+        }
+
+        return answer;
     }
-        public void consumeNewLine() {
+
+    private boolean errorChecksStringInput(String input) {
+        return !input.trim().isEmpty();
+    }
+
+
+    public void consumeNewLine() {
         input.nextLine();
     }
 }

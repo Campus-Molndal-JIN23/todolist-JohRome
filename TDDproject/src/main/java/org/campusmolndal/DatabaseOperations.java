@@ -4,8 +4,6 @@ import java.util.List;
 
 public interface DatabaseOperations {
 
-    // TODO: Break down this interface in smaller chunks
-
     void create(ToDo todo);
 
     ToDo getTodoById(int id);

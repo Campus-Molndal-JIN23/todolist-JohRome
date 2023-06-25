@@ -7,9 +7,6 @@ public class Application {
     private ToDoFacade toDoFacade;
     private Input input;
 
-    // Todo: Pass an Input object to the constructor - DONE
-    // Todo: Test this class if necessary
-
     public Application() {
         mongoDBOperations = new MongoDBOperations();
         toDoFacade = new ToDoFacade(mongoDBOperations);
@@ -21,7 +18,7 @@ public class Application {
 
         while (!isDone) {
             Output.showTodoMenu();
-            switch (input.readIntFromUser()) {
+            switch (input.readCorrectIntFromUser()) {
                 case 1 -> letUserCreateTodo();
                 case 2 -> Output.printById(toDoFacade, input);
                 case 3 -> letUserUpdateToDoText();
@@ -34,29 +31,31 @@ public class Application {
     }
 
     private void letUserCreateTodo() {
-        Output.promptUserToSetIdAndText();
-        int id = input.readIntFromUser();
+        Output.promptUserToSetIdOnTodo();
+        int id = input.readCorrectIntFromUser();
         input.consumeNewLine();
+        Output.promptUserToSetTextOnTodo();
         String text = input.readStringFromUser();
         ToDo todo = new ToDo(id, text, false);
         toDoFacade.createTodo(todo);
     }
 
     private void letUserUpdateToDoText() {
-        Output.askUserToUpdateTextInTodo();
-        int id = input.readIntFromUser();
+        Output.askUserWichId();
+        int id = input.readCorrectIntFromUser();
         input.consumeNewLine();
+        Output.promptUserToSetTextOnTodo();
         String newText = input.readStringFromUser();
         toDoFacade.updateTodoText(id, newText);
     }
 
     private void letUserUpdateTodoDone() {
         Output.askUserToUpdateDoneStatusInTodo();
-        toDoFacade.updateTodoDone(input.readIntFromUser(), true);
+        toDoFacade.updateTodoDone(input.readCorrectIntFromUser(), true);
     }
 
     private void letUserDeleteTodo() {
         Output.askUserWichTodoToDelete();
-        toDoFacade.deleteTodoById(input.readIntFromUser());
+        toDoFacade.deleteTodoById(input.readCorrectIntFromUser());
     }
 }

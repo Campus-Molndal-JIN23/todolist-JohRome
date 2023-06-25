@@ -1,5 +1,6 @@
 package org.campusmolndal;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class Output {
@@ -24,7 +25,7 @@ public class Output {
 
     public static void printById(ToDoFacade toDoFacade, Input input) {
         System.out.println("Enter the id of the todo you want to see: ");
-        System.out.println(toDoFacade.getTodoById(input.readIntFromUser()));
+        System.out.println(toDoFacade.getTodoById(input.readCorrectIntFromUser()));
     }
     public static void promptUserForCorrectInt() {
         System.out.println("Please enter a valid integer");
@@ -32,16 +33,22 @@ public class Output {
     public static void promptUserForCorrectString() {
         System.out.println("Please enter a valid string");
     }
-    public static void promptUserToSetIdAndText() {
-        System.out.println("Start by setting an integer id and then a string text");
+    public static void promptUserToSetIdOnTodo() {
+        System.out.println("Set an integer id on your todo: ");
     }
-    public static void askUserToUpdateTextInTodo() {
-        System.out.println("First enter the id of the todo you want to update and then the new text");
+    public static void promptUserToSetTextOnTodo() {
+        System.out.println("Set a text to your todo: ");
     }
+   public static void askUserWichId() {
+       System.out.println("What id has the todo?: ");
+   }
     public static void askUserToUpdateDoneStatusInTodo() {
         System.out.println("Enter the id on the todo you want to set to done");
     }
     public static void askUserWichTodoToDelete() {
         System.out.println("Enter the id on the todo you want to delete");
+    }
+    public static void tellUserWrongInputIsMade(InputMismatchException e) {
+        System.out.println(e.getMessage());
     }
 }

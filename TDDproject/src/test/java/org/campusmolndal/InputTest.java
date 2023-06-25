@@ -37,10 +37,9 @@ class InputTest {
         sut = new Input(scanner);
 
         // Act
-        int actual = sut.readIntFromUser();
+        int actual = sut.readCorrectIntFromUser();
 
         // Assert
         assertEquals(1,actual);
     }
-
 }
