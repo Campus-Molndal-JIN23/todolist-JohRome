@@ -33,7 +33,7 @@ TDDproject
 ChatGPT for help me understand things that were hard to grasp at first glance.
 
 #### People who helped me with this project:
-Emil.S -  pending review
+Emil.S - Said that Output.showToDoMenu() should be written cleaner - DONE
 
 ## Dependencies used for this program
 - logback-classic -> https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
