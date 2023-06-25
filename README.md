@@ -30,10 +30,10 @@ Follow the instructions in the console to use the app.
 - Each test is runnable, and you can run them all at once or one by one, by clicking the green play button.
 
 ## Credits
-ChatGPT for help me understand how to run
+ChatGPT for help me understand things that were hard to grasp at first glance.
 
 #### People who helped me with this project:
-Emil pending review
+Emil.S -  pending review
 
 ## Dependencies used for this program
 - logback-classic -> https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
