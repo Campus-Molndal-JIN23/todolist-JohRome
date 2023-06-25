@@ -6,10 +6,11 @@ Johan Romeo
 ## Projektet
 
 ### Beskrivning av projektet
-Jag har valt att göra en ToDo applikation som använder sig av MongoDB för att lagra data. Applikationen är skriven i Java och använder sig av Maven för att hantera dependencies. Jag har valt att använda mig av JUnit för att testa applikationen. Jag har valt att använda mig av en facad klass för att kalla på metoder i klassen som hanterar MongoDB. Jag har valt att använda mig av en klass som hanterar CRUD(L) operationer mot MongoDB. Jag har valt att använda mig av en klass som hanterar ToDo objekt. Jag har valt att använda mig av en klass som hanterar input från användaren. Jag har valt att använda mig av en klass som hanterar output till användaren. Jag har valt att använda mig av en klass som hanterar en meny för användaren. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från användaren. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil. Jag har valt att använda mig av en klass som hanterar en scanner för att läsa in input från fil.
+Jag har skapat ett program som låter användaren skapa todo-lappar som sedan skickas upp till en MongoDB databas.
+Användaren kan utföra CRUD(L) operationer mot databasen via programmet.
 ### Vad du har gjort
-Jag har skrivit ett litet program som låter användaren göra små todo-lappar som skickas upp i den lokala MongoDB:n.
-Jag har implementerat CRUD(L) operationer som användaren kan köra mot MongoDB:n via programmet.
+Efter som detta var en enskild uppgift så har jag gjort allting själv.
+Allt ifrån planering till implementation och testning.
 ## Planering
 
 ### Lösningsförslag innan uppgiften påbörjas
