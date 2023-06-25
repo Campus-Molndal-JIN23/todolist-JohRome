@@ -16,11 +16,11 @@ TDDproject
 - [License](#license)
 
 ## Installation
-Start by downloading MongoDB from https://www.mongodb.com/try/download/community. Follow the instructions and  install MongoDB on your computer.
-Then download as zip or clone the project from GitHub. 
-Go to the folder.
-Open Main.java and run the main method by clicking the green play button or by pressing shift + f10.
-Follow the instructions in the console to use the app.
+- Start by downloading MongoDB from https://www.mongodb.com/try/download/community. Follow the instructions and  install MongoDB on your computer.
+ - Then download as zip or clone the project from GitHub. 
+ - Go to the folder on your computer.
+- Open Main.java and run the main method by clicking the green play button or by pressing shift + f10.
+- Follow the instructions in the console to use the app.
 
 ## Usage
 - You are presented with a menu with different options.
