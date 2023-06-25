@@ -5,8 +5,7 @@ TDDproject
 
 ## Description
 - School assignment for QA course. A simple little todo app to demonstrate the use of MongoDB, JUnit 5 and Mockito
-- The app is a simple todo list app that allows the user to add, remove and edit tasks. The app also allows the user to mark tasks as done and undone. The app also allows the user to sort the tasks by name and status.
-- The app allows the user to keep track of tasks that need to be done and tasks that have been done.
+- The app is a simple todo app that allows the user to add, remove and edit todos in your local MongoDB. The app also allows the user to mark tasks as done and undone.
 - I learned how to use JUnit 5 and Mockito to test my code.
 
 ## Table of Contents (Optional)
