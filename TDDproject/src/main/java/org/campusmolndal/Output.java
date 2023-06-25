@@ -1,6 +1,5 @@
 package org.campusmolndal;
 
-import java.util.InputMismatchException;
 import java.util.List;
 
 public class Output {
