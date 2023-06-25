@@ -30,9 +30,6 @@ public class Output {
     public static void promptUserForCorrectInt() {
         System.out.println("Please enter a valid integer");
     }
-    public static void promptUserForCorrectString() {
-        System.out.println("Please enter a valid string");
-    }
     public static void promptUserToSetIdOnTodo() {
         System.out.println("Set an integer id on your todo: ");
     }
@@ -48,7 +45,5 @@ public class Output {
     public static void askUserWichTodoToDelete() {
         System.out.println("Enter the id on the todo you want to delete");
     }
-    public static void tellUserWrongInputIsMade(InputMismatchException e) {
-        System.out.println(e.getMessage());
-    }
+
 }

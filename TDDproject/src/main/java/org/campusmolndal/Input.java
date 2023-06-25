@@ -21,7 +21,6 @@ public class Input {
             } catch (InputMismatchException e) {
                 input.next();
                 System.out.println("Wrong input");
-                //Output.tellUserWrongInputIsMade(e);
             }
         }
         return answer;
