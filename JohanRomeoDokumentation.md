@@ -2,6 +2,9 @@
 Johan Romeo
 
 ## Egna reflektioner
+ - Bra att använda sig av det vi har gått igenom i alla kurser och sätta samman det till ett projekt. 
+ - Väldigt lärorikt och inspirerande att få se på sina klasskamraters projekt och hur de har löst uppgiften. Det lär jag mig mycket utav.
+ - Att även få arbetet godkänt av andra samt att godkänna själv är något jag tycker är viktigt för framtiden och för personlig utveckling.
 
 ## Projektet
 
