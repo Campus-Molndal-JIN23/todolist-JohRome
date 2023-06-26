@@ -9,11 +9,11 @@ public class Application {
     private Input input;
 
 
-public Application(DatabaseOperations databaseOperations, ToDoFacade toDoFacade) {
-    this.databaseOperations = databaseOperations;
-    this.toDoFacade = toDoFacade;
-    input = new Input(new Scanner(System.in));
-}
+    public Application(DatabaseOperations databaseOperations, ToDoFacade toDoFacade) {
+        this.databaseOperations = databaseOperations;
+        this.toDoFacade = toDoFacade;
+        input = new Input(new Scanner(System.in));
+    }
 
     public void runProgram() {
         boolean isDone = false;

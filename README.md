@@ -47,7 +47,7 @@ MIT License
 ### People that started the program and gave feedback
 - Samer.I - Said the program worked, was written in a way so the user could understand what the methods are doing. No errors were found.
 ### People that reviewed code without running the program
-- Kristoffer.L - Said it would be better to pass dependency injections instead of creating new objects in the Application class. - Under Progress
+- Kristoffer.L - Said it would be better to pass dependency injections instead of creating new objects in the Application class. - Done
 - Emil.S - Said the code was easy to read and understand. Was unsure about test coverages. Thought it would be better to clean up showTodoMenu() method. - Done
 ## Tests
 - Usage of Mockito and JUnit 5 to test the code.
