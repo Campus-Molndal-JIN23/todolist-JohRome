@@ -17,8 +17,8 @@ TDDproject
 
 ## Installation
 - Start by downloading MongoDB from https://www.mongodb.com/try/download/community. Follow the instructions and  install MongoDB on your computer.
- - Then download as zip or clone the project from GitHub. 
- - Go to the folder on your computer.
+- Then download as zip or clone the project from GitHub. 
+- Go to the folder on your computer.
 - Open Main.java and run the main method by clicking the green play button or by pressing shift + f10.
 - Follow the instructions in the console to use the app.
 
@@ -27,13 +27,10 @@ TDDproject
 - Use each option as you see fit and try to explore the app.
 - The app allows you to add, see, remove and edit tasks.
 - For running tests, head over to the test folder and run the tests you want to run. 
-- Each test is runnable, and you can run them all at once or one by one, by clicking the green play button.
+
 
 ## Credits
 ChatGPT for help me understand things that were hard to grasp at first glance.
-
-#### People who helped me with this project:
-Emil.S - Said that Output.showToDoMenu() should be written cleaner - DONE
 
 ## Dependencies used for this program
 - logback-classic -> https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
@@ -44,6 +41,17 @@ Emil.S - Said that Output.showToDoMenu() should be written cleaner - DONE
 
 ## License
 MIT License
+
+## Reviews on this project. 
+
+### People that started the program and gave feedback
+- Samer.I - Said the program worked, was written in a way so the user could understand what the methods are doing. No errors were found.
+### People that reviewed code without running the program
+- Kristoffer.L - Said it would be better to pass dependency injections instead of creating new objects in the Application class. - Under Progress
+- Emil.S - Said the code was easy to read and understand. Was unsure about test coverages. Thought it would be better to clean up showTodoMenu() method. - Done
+## Tests
+- Usage of Mockito and JUnit 5 to test the code.
+- Each test is runnable, and you can run them all at once or one by one, by clicking the green play button.
 
 ---
 

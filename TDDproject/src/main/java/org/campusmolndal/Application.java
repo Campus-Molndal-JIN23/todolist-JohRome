@@ -7,6 +7,8 @@ public class Application {
     private ToDoFacade toDoFacade;
     private Input input;
 
+    // TODO: Change to dependency injection instead of creating objects in constructor
+
     public Application() {
         mongoDBOperations = new MongoDBOperations();
         toDoFacade = new ToDoFacade(mongoDBOperations);
