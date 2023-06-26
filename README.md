@@ -30,7 +30,7 @@ TDDproject
 
 
 ## Credits
-ChatGPT for help me understand things that were hard to grasp at first glance.
+ChatGPT for help me understand things that were hard to grasp at first glance and for JavaDocs.
 
 ## Dependencies used for this program
 - logback-classic -> https://mvnrepository.com/artifact/ch.qos.logback/logback-classic

@@ -6,13 +6,18 @@ import java.io.InputStream;
 import java.util.Scanner;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The InputTest class contains unit tests for the Input class.
+ */
 class InputTest {
 
     private Input sut;
     private InputStream inputStream;
     private Scanner scanner;
 
-
+    /**
+     * Tests the readStringFromUser method of the Input class.
+     */
     @Test
     void testReadStringFromUser() {
         // Arrange
@@ -28,6 +33,9 @@ class InputTest {
         assertEquals(fakeInput, result);
     }
 
+    /**
+     * Tests the readCorrectIntFromUser method of the Input class.
+     */
     @Test
     void testReadIntegerFromUser() {
         // Arrange
@@ -40,6 +48,6 @@ class InputTest {
         int actual = sut.readCorrectIntFromUser();
 
         // Assert
-        assertEquals(1,actual);
+        assertEquals(1, actual);
     }
 }

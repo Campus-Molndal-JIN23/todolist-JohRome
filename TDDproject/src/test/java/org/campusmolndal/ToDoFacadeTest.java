@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+/**
+ * The ToDoFacadeTest class contains unit tests for the ToDoFacade class.
+ */
 class ToDoFacadeTest {
 
     @Mock
@@ -20,12 +23,18 @@ class ToDoFacadeTest {
 
     private ToDoFacade sut;
 
+    /**
+     * Sets up the test environment before each test case.
+     */
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
         sut = new ToDoFacade(mockMongoDBOperations);
     }
 
+    /**
+     * Verifies that createTodo method calls the create method of the database operations.
+     */
     @Test
     void verifiesCreateToDoIsCalled() {
         // Arrange
@@ -38,6 +47,10 @@ class ToDoFacadeTest {
         verify(mockMongoDBOperations).create(todo);
     }
 
+    /**
+     * Tests the getTodoById method of the ToDoFacade class.
+     * It verifies that the expected ToDo object is returned for a given ID.
+     */
     @Test
     void getTodoByIdShouldReturnExpectedToDo() {
         // Arrange
@@ -52,6 +65,10 @@ class ToDoFacadeTest {
         assertEquals(expectedToDo, result);
     }
 
+    /**
+     * Tests the scenario where a non-existing ID is provided to getTodoById method.
+     * It verifies that null is returned when the ID does not correspond to any ToDo.
+     */
     @Test
     void ifYouGetAToDoByIdThatDoesNotExistThenReturnNull() {
         // Arrange
@@ -65,6 +82,10 @@ class ToDoFacadeTest {
         assertNull(result);
     }
 
+    /**
+     * Tests the updateTodoText method of the ToDoFacade class.
+     * It verifies that the text of the ToDo is successfully updated.
+     */
     @Test
     void updateToDoShouldSuccessfullyUpdateToDo() {
         // Arrange
@@ -81,6 +102,10 @@ class ToDoFacadeTest {
         verify(mockMongoDBOperations).updateTodoText(todo);
     }
 
+    /**
+     * Tests the updateTodoDone method of the ToDoFacade class.
+     * It verifies that the done status of the ToDo is successfully updated.
+     */
     @Test
     void updateToDoDoneShouldSuccessfullyUpdateToDo() {
         // Arrange
@@ -97,6 +122,9 @@ class ToDoFacadeTest {
         verify(mockMongoDBOperations).updateTodoDone(todo);
     }
 
+    /**
+     * Verifies that deleteTodoById method calls the delete method of the database operations.
+     */
     @Test
     void verifiesDeleteToDoByIdIsCalled() {
         // Arrange
@@ -109,6 +137,10 @@ class ToDoFacadeTest {
         verify(mockMongoDBOperations).delete(id);
     }
 
+    /**
+     * Tests the getAllTodos method of the ToDoFacade class.
+     * It verifies that the expected list of ToDos is returned.
+     */
     @Test
     void getAllToDosShouldReturnExpectedToDos() {
         // Arrange
