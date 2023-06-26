@@ -3,13 +3,26 @@ package org.campusmolndal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * The Input class handles user input operations.
+ */
 public class Input {
     private Scanner input;
 
+    /**
+     * Constructs an Input object with the specified scanner for user input.
+     *
+     * @param input the scanner object used for reading user input
+     */
     public Input(Scanner input) {
         this.input = input;
     }
 
+    /**
+     * Reads a non-negative integer input from the user.
+     *
+     * @return the non-negative integer input from the user
+     */
     public int readCorrectIntFromUser() {
         int answer = 0;
         boolean isValid = false;
@@ -20,7 +33,7 @@ public class Input {
                 isValid = errorCheckIntInput(answer);
             } catch (InputMismatchException e) {
                 input.next();
-                System.out.println("Wrong input");
+                Output.tellUserWrongInput();
             }
         }
         return answer;
@@ -35,6 +48,11 @@ public class Input {
         }
     }
 
+    /**
+     * Reads a non-empty string input from the user.
+     *
+     * @return the non-empty string input from the user
+     */
     public String readStringFromUser() {
         String answer = "";
         boolean isValid = false;
@@ -44,7 +62,7 @@ public class Input {
                 answer = input.nextLine();
                 isValid = errorChecksStringInput(answer);
             } catch (Exception e) {
-                System.out.println("Empty string");
+                Output.tellUserEmptyString();
             }
         }
 
@@ -55,9 +73,10 @@ public class Input {
         return !input.trim().isEmpty();
     }
 
-
+    /**
+     * Consumes the newline character from the input stream.
+     */
     public void consumeNewLine() {
         input.nextLine();
     }
 }
-

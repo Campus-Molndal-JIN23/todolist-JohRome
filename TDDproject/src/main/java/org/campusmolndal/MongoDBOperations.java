@@ -75,6 +75,7 @@ public class MongoDBOperations implements DatabaseOperations {
         return todos;
     }
 
+    // Help from ChatGPT. If an id is set that already exists in the database -> increment it by one
     private void checkingUniquenessOfId(ToDo todo) {
         int id = todo.getId();
         if (todoCollection.find(Filters.eq("id", id)).first() != null) {

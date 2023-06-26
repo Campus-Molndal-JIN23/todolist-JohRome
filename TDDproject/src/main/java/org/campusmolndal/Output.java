@@ -44,5 +44,11 @@ public class Output {
     public static void askUserWichTodoToDelete() {
         System.out.println("Enter the id on the todo you want to delete");
     }
+    public static void tellUserWrongInput() {
+        System.out.println("Wrong input");
+    }
+    public static void tellUserEmptyString() {
+        System.out.println("Empty string");
+    }
 
 }

@@ -1,7 +1,5 @@
 package org.campusmolndal;
 
-import java.util.List;
-
 /*
  * ----------------------------------------------------------------------------
  * Copyright (c) 2019-2023 Marcus Medina, Campus Mölndal
@@ -17,8 +15,6 @@ public class Main {
         var facade = new ToDoFacade(mongoDBOperations);
         var application = new Application(mongoDBOperations, facade);
         application.runProgram();
-
-
     }
 }
 
