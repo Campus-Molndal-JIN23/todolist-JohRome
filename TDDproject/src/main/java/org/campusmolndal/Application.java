@@ -3,17 +3,17 @@ package org.campusmolndal;
 import java.util.Scanner;
 
 public class Application {
-    private MongoDBOperations mongoDBOperations;
+
+    private DatabaseOperations databaseOperations;
     private ToDoFacade toDoFacade;
     private Input input;
 
-    // TODO: Change to dependency injection instead of creating objects in constructor
 
-    public Application() {
-        mongoDBOperations = new MongoDBOperations();
-        toDoFacade = new ToDoFacade(mongoDBOperations);
-        input = new Input(new Scanner(System.in));
-    }
+public Application(DatabaseOperations databaseOperations, ToDoFacade toDoFacade) {
+    this.databaseOperations = databaseOperations;
+    this.toDoFacade = toDoFacade;
+    input = new Input(new Scanner(System.in));
+}
 
     public void runProgram() {
         boolean isDone = false;

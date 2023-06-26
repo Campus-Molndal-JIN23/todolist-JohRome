@@ -13,9 +13,11 @@ import java.util.List;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-
-        Application application = new Application();
+        var mongoDBOperations = new MongoDBOperations();
+        var facade = new ToDoFacade(mongoDBOperations);
+        var application = new Application(mongoDBOperations, facade);
         application.runProgram();
+
 
     }
 }

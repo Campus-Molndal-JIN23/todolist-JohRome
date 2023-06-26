@@ -3,41 +3,41 @@ package org.campusmolndal;
 import java.util.List;
 
 public class ToDoFacade {
-    private MongoDBOperations mongoDBOperations;
+    private DatabaseOperations databaseOperations;
 
-    public ToDoFacade(MongoDBOperations mongoDBOperations) {
-        this.mongoDBOperations = mongoDBOperations;
+    public ToDoFacade(DatabaseOperations databaseOperations) {
+        this.databaseOperations = databaseOperations;
     }
 
     public void createTodo(ToDo todo) {
-        mongoDBOperations.create(todo);
+        databaseOperations.create(todo);
     }
 
     public ToDo getTodoById(int id) {
-        return mongoDBOperations.getTodoById(id);
+        return databaseOperations.getTodoById(id);
     }
 
     public void updateTodoText(int id, String newText) {
-        ToDo todo = mongoDBOperations.getTodoById(id);
+        ToDo todo = databaseOperations.getTodoById(id);
         if (todo != null) {
             todo.setText(newText);
-            mongoDBOperations.updateTodoText(todo);
+            databaseOperations.updateTodoText(todo);
         }
     }
 
     public void updateTodoDone(int id, boolean newDoneStatus) {
-        ToDo todo = mongoDBOperations.getTodoById(id);
+        ToDo todo = databaseOperations.getTodoById(id);
         if (todo != null) {
             todo.setDone(newDoneStatus);
-            mongoDBOperations.updateTodoDone(todo);
+            databaseOperations.updateTodoDone(todo);
         }
     }
 
     public void deleteTodoById(int id) {
-        mongoDBOperations.delete(id);
+        databaseOperations.delete(id);
     }
 
     public List<ToDo> getAllTodos() {
-        return mongoDBOperations.getAllTodos();
+        return databaseOperations.getAllTodos();
     }
 }
